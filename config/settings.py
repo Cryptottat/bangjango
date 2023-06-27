@@ -42,7 +42,9 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'channels',
-    'chat',
+    # 'chat',
+    # 'channels.apps.ChannelsConfig',
+    'chat.apps.ChatConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -76,7 +78,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['templates',],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
