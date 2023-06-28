@@ -19,7 +19,7 @@
 
     var chatSocket = new WebSocket(
         'ws://' + window.location.host +
-        'ws/aa/');
+        'ws/aa/a');
 
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
@@ -32,19 +32,7 @@
     };
 
 
-    var chatSocket2 = new WebSocket(
-        'ws://' + window.location.host +
-        'ws/aa/a');
 
-    chatSocket2.onmessage = function(e) {
-        var data = JSON.parse(e.data);
-        var message = data['message'];
-        document.querySelector('#chat-log').value += (message + '\n');
-    };
-
-    chatSocket2.onclose = function(e) {
-        console.error('Chat socket closed unexpectedly');
-    };
 
 
     document.querySelector('#chat-message-input').focus();
