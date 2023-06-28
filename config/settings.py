@@ -42,7 +42,9 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
 
-
+    'channels',
+'chat',
+'rest_framework',
     #
     # 'channels.apps.ChannelsConfig',
     # 'chat.apps.ChatConfig',
@@ -53,11 +55,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-'chat',
 
-'rest_framework',
 
-    'channels',
+
+
+
 
 ]
 
